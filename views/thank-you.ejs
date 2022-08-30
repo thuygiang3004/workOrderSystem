@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>Confirmation</title>
+  </head>
+  <body>
+    <% if(message == "submitted") {%> <%- include('partials/nav.ejs') %> <% } %>
+    <% if(message == "edited" || message == "deleted") {%> <%-
+    include('partials/nav-admin.ejs') %> <% } %>
+    <main>
+      <h3>Thank you!</h3>
+      <h3>Your request has been successfully <%= message %>.</h3>
+    </main>
+    <%- include('partials/footer.ejs')%>
+  </body>
+</html>

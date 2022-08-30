@@ -1,0 +1,85 @@
+<% var cnameError = ''; var cemailError = ''; var cphoneError = ''; var
+cunitError = ''; var cphotoError = ''; var cdescriptionError = ''; if(typeof(er)
+!= 'undefined') { for(var error of er) { switch(error.param){ case 'cname':
+cname = error.value; cnameError = error.msg; break; case 'cemail': cemail =
+error.value; cemailError = error.msg; break; case 'cphone': cphone =
+error.value; cphoneError = error.msg; break; case 'cunit': cunit = error.value;
+cunitError = error.msg; break; case 'cphoto': cphoto = error.value; cphotoError
+= error.msg; break; case 'cdescription': cdescription = error.value;
+cdescriptionError = error.msg; break; } } cname = userData.cname; cemail =
+userData.cemail; cphone = userData.cphone; cunit = userData.cunit; cdescription
+= userData.cdescription; cphotoName = userData.cphotoName} %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>Request Edit</title>
+  </head>
+  <body>
+    <%- include('partials/nav-admin.ejs') %>
+    <main>
+      <h2>TENANT WORK ORDER REQUEST FORM</h2>
+      <form
+        action="/editprocess/<%= _id %>"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="cwrapper">
+          <label for="cname" class="required">Name</label>
+          <input type="text" id="cname" name="cname" value="<%= cname %>" />
+          <p class="error"><%= cnameError %></p>
+        </div>
+        <div class="cwrapper">
+          <label for="cemail" class="required">Email</label>
+          <input type="email" id="cemail" name="cemail" value="<%= cemail %>" />
+          <p class="error"><%= cemailError %></p>
+        </div>
+        <div class="cwrapper">
+          <label for="cphone" class="required">Phone</label>
+          <input type="text" id="cphone" name="cphone" value="<%= cphone %>" />
+          <p class="error"><%= cphoneError %></p>
+        </div>
+        <div class="cwrapper">
+          <label for="cunit" class="required">Unit No.</label>
+          <input type="text" id="cunit" name="cunit" value="<%= cunit %>" />
+          <p class="error"><%= cunitError %></p>
+        </div>
+        <div class="cwrapper">
+          <label for="cphoto">Photo</label>
+          <input type="file" id="cphoto" name="cphoto" />
+          <img
+            style="width: 100px"
+            src="/uploads/<%= cphotoName %>"
+            alt="Photo"
+          />
+          <p class="error"><%= cphotoError %></p>
+        </div>
+        <div class="cwrapper">
+          <label for="cdescription" id="cdescriptionLabel" class="required"
+            >Please describe the work or service required:</label
+          >
+          <input
+            type="text"
+            id="cdescription"
+            name="cdescription"
+            value="<%= cdescription %>"
+          />
+          <p class="error"><%= cdescriptionError %></p>
+        </div>
+        <div class="submission">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </main>
+    <%- include('partials/footer.ejs')%>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: "#cdescription",
+      });
+    </script>
+  </body>
+</html>

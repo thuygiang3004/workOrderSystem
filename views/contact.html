@@ -1,0 +1,197 @@
+<!-- Thuy Giang Nguyen 8832159 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/css/styles1.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+        <!-- Logo created by using https://hatchful.shopify.com/onboarding/pick-space -->
+        <h2>We make your home as comfortable as you may wish</h2>
+      </div>
+    </header>
+    <nav>
+      <ul class="container">
+        <li><a href="/"> Home </a></li>
+        <li><a href="/listings"> Listings </a></li>
+        <li>
+          <a href="contact.html"> Contact Us </a>
+          <ul>
+            <li><a href="contact.html#video">Property Management</a></li>
+            <li><a href="contact.html">Real Estate Services</a></li>
+            <li><a href="contact.html">Renovations</a></li>
+          </ul>
+        </li>
+        <li><a href="request-form"> Tenants </a></li>
+        <li><a href="login"> Admin Portal </a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="textOverImg">
+        <img src="images/innerBanner.png" alt="Building and sky" />
+        <!-- Image pexels-vishnu-r-nair-1105666.jpg by Vishnu R Nair (May 28th, 2018). People at Concert [Photograph]. From Pexels. https://www.pexels.com/photo/people-at-concert-1105666/ -->
+        <div class="textLayer">
+          <h1>Sky is our limit</h1>
+        </div>
+      </section>
+      <section class="container">
+        <div class="textVideo">
+          <div class="text">
+            <h2>Find your next home with us</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Necessitatibus, incidunt itaque ab illum officia non quas officiis
+              aliquam aut saepe, asperiores accusamus laborum esse voluptates
+              quibusdam quos rem unde sapiente!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Necessitatibus, incidunt itaque ab illum officia non quas officiis
+              aliquam aut saepe, asperiores accusamus laborum esse voluptates
+              quibusdam quos rem unde sapiente!
+            </p>
+          </div>
+          <div class="video" id="video">
+            <video
+              controls
+              autoplay
+              src="media/production ID_4057313.mp4"
+            ></video>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="contactForm" id="contactForm">
+          <h2>Want to know more about us and how we can work together?</h2>
+          <h4>Fill out the form and we'll be in touch in no time.</h4>
+          <form>
+            <section class="formPart">
+              <div class="inputWrapper">
+                <label for="cName">Name</label>
+                <input type="text" tabindex="1" id="cName" name="cName" />
+              </div>
+              <div class="inputWrapper">
+                <label for="cEmail">Email</label>
+                <input type="text" tabindex="2" id="cEmail" name="cEmail" />
+              </div>
+              <div class="inputWrapper">
+                <label for="propertyType">Interested Property Type</label>
+                <select name="propertyType" id="propertyType" tabindex="3">
+                  <optgroup label="Commercial">
+                    <option value="office">Office</option>
+                    <option value="retail">Retail</option>
+                    <option value="otherCommercial">Others</option>
+                  </optgroup>
+                  <optgroup label="Housing">
+                    <option value="condo">Condo</option>
+                    <option value="detached">Detached</option>
+                    <option value="townhouse">Townhouse</option>
+                  </optgroup>
+                  <optgroup label="Others">
+                    <option value="others">Others</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="inputWrapper">
+                <label for="content">Discussion Topic</label>
+                <textarea name="content" id="content" tabindex="4"></textarea>
+              </div>
+            </section>
+
+            <section class="formPart">
+              <fieldset class="checkboxes">
+                <legend>What are you interested to learn about us?</legend>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="contact.html"
+                    id="contact.html"
+                    value="checkbox"
+                    tabindex="5"
+                  />
+                  <label for="contact.html"> Our contact.html </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="property"
+                    id="property"
+                    value="property"
+                    tabindex="6"
+                  />
+                  <label for="property"> Our Properties </label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="others"
+                    id="others"
+                    value="others"
+                    tabindex="7"
+                  />
+                  <label for="others"> Others </label>
+                </div>
+              </fieldset>
+              <fieldset class="radios">
+                <legend>Subscribe for our newsletter?</legend>
+                <div>
+                  <input type="radio" name="subscribe" id="yes" tabindex="8" />
+                  <label for="yes">Yes</label>
+                </div>
+                <div>
+                  <input type="radio" name="subscribe" id="no" tabindex="9" />
+                  <label for="no">No</label>
+                </div>
+              </fieldset>
+            </section>
+            <div class="submitWrapper">
+              <input type="reset" value="Reset" tabindex="11" />
+            </div>
+            <div class="submitWrapper">
+              <input type="submit" value="Submit" tabindex="10" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="container footerLink">
+        <div>
+          <h3>Learn more</h3>
+          <ul>
+            <li><a href="index.html#video"> Our Listings</a></li>
+            <li><a href="contact.html#table"> Gallery</a></li>
+            <li><a href="contact.html#contactForm"> Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="index.html#textImage"> Our Team</a></li>
+            <li><a href="index.html#imageText"> Services</a></li>
+            <li><a href="index.html#headerOnly1"> Our Customers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>External Link</h3>
+          <ul>
+            <li><a href="https://www.realtor.ca/"> Realtor </a></li>
+            <li><a href="https://housesigma.com/web/en/"> HouseSigma </a></li>
+            <li><a href="https://www.point2homes.com/"> Point2homes</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="copyright">
+        &copy; Copyright - Thuy Giang Nguyen - thuygiang3004@gmail.com
+      </section>
+    </footer>
+  </body>
+</html>

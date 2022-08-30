@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>Request Details</title>
+  </head>
+  <body>
+    <%- include('partials/nav-admin.ejs') %>
+    <main>
+      <h2>Request Details</h2>
+      <div class="imgWrapper">
+        <img src="/uploads/<%= cphotoName %>" alt="" />
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">ID</th>
+            <td><%= _id %></td>
+          </tr>
+          <tr>
+            <th scope="row">Name</th>
+            <td><%= cname %></td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td><%= cemail %></td>
+          </tr>
+          <tr>
+            <th scope="row">Phone</th>
+            <td><%= cphone %></td>
+          </tr>
+          <tr>
+            <th scope="row">Unit</th>
+            <td><%= cunit %></td>
+          </tr>
+          <tr>
+            <th scope="row">Description</th>
+            <td><%- cdescription %></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <%- include('partials/footer.ejs')%>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+body {
+  /* margin: 10px auto; */
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+.container {
+  margin: auto;
+  width: 1100px;
+}
+header {
+  background-color: #a8dadc;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  text-align: center;
+}
+header h2 {
+  margin-top: 40px;
+}
+header img {
+  width: 80%;
+  margin: 10px;
+}
+
+nav {
+  background-color: #fcf6bd;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav a {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 0 40px;
+}
+nav a:hover {
+  color: #16554d;
+}
+
+/* CSS for sub-menus */
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li ul {
+  width: 200px;
+  position: absolute;
+  z-index: 999;
+  text-align: left;
+  background-color: #2a9d8f;
+  box-shadow: 0 0 5px #264653;
+}
+
+nav ul li ul li a {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  display: block;
+}
+
+nav ul li ul li:hover a:hover {
+  color: #264653;
+  background-color: #a8dadc;
+}
+
+nav ul li ul {
+  display: none;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+main {
+  width: 800px;
+  margin: 20px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px;
+}
+main h2 {
+  text-align: center;
+}
+main .cwrapper {
+  margin: 10px;
+}
+main .cwrapper label {
+  display: inline-block;
+  width: 150px;
+  font-size: 20px;
+}
+main .cwrapper input {
+  background-color: transparent;
+  border: 1px solid #2f036b;
+  font-size: 18px;
+}
+#cdescriptionLabel {
+  width: auto;
+  margin-bottom: 10px;
+}
+main .submission {
+  text-align: center;
+  margin: 20px;
+}
+main .submission input {
+  border: 2px solid black;
+  background-color: #787d46;
+  font-size: 20px;
+  padding: 5px 10px;
+  color: white;
+}
+
+.error {
+  font-size: 14px;
+  color: #b00606;
+  text-align: center;
+}
+
+.required:after {
+  content: "*";
+  color: red;
+}
+
+/* CSS for Dashboard */
+table img {
+  max-width: 50px;
+}
+
+table {
+  width: 100%;
+  border: solid 2px black;
+  border-collapse: collapse;
+}
+th,
+td {
+  text-align: left;
+  border: solid 2px black;
+  padding: 5px;
+}
+
+/* CSS for View */
+.imgWrapper img {
+  width: 40%;
+}
+
+/* CSS for Footer */
+
+footer {
+  margin-top: 10px;
+  padding: 0 0px 20px 0px;
+  background-color: #264653;
+  color: white;
+  text-align: center;
+}
+.footerLink {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footerLink ul li {
+  list-style-type: none;
+  display: block;
+  margin: 8px;
+  font-weight: 150;
+}
+.footerLink ul {
+  padding: 0;
+}
+
+.footerLink a {
+  text-decoration: none;
+  color: white;
+}
+.footerLink a:hover {
+  color: #fedeae;
+}
+.copyright {
+  border-top: 2px solid black;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+/* CSS for Listings */
+.listingList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.listingList img {
+  width: 90%;
+}
+.listingList .iaddress {
+  font-weight: bold;
+}

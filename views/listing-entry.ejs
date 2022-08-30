@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>New listing registration</title>
+  </head>
+  <body>
+    <%- include('partials/nav-admin.ejs') %>
+    <main>
+      <h2>New listing registration</h2>
+      <form action="processListing" method="POST" enctype="multipart/form-data">
+        <div class="cwrapper">
+          <label for="address" class="required">Address</label>
+          <input type="text" id="address" name="address" />
+        </div>
+        <div class="cwrapper">
+          <label for="fee" class="required">Rental Fee</label>
+          <input id="fee" name="fee" />
+        </div>
+        <div class="cwrapper">
+          <label for="photo">Photo</label>
+          <input type="file" id="photo" name="photo" />
+        </div>
+        <div class="cwrapper">
+          <label for="description" id="cdescriptionLabel" class="required">
+            Desciption</label
+          >
+          <input type="text" id="description" name="description" />
+        </div>
+        <div class="submission">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </main>
+    <%- include('partials/footer.ejs')%>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: "#description",
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>Login</title>
+  </head>
+  <body>
+    <%- include('partials/nav.ejs') %>
+    <main>
+      <h2>Login for TGN staff</h2>
+      <form action="login" method="POST">
+        <div class="cwrapper">
+          <label for="uname">Username</label>
+          <input type="text" id="uname" name="uname" />
+        </div>
+        <div class="cwrapper">
+          <label for="upass">Password</label>
+          <input type="password" id="upass" name="upass" />
+        </div>
+        <div class='error' id="error">
+            <p id="errors">
+              <% if(typeof(error) != 'undefined'){%> <%=
+                  error %> <br />
+                  <% } %>
+            </p>
+          </section>
+        <div class="submission">
+          <input type="submit" value="Login" />
+        </div>
+      </form>
+    </main>
+    <%- include('partials/footer.ejs')%>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: "#cdescription",
+      });
+    </script>
+  </body>
+</html>

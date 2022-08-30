@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>Login</title>
+  </head>
+  <body>
+    <%- include('partials/nav.ejs') %>
+    <main>
+      <h2>Our Rental Listings</h2>
+      <section class="listingList">
+        <% for(var listing of listings){ %>
+        <div class="listing">
+          <img src="uploads/<%= listing.photoName %>" alt="" />
+          <p class="iaddress">Address: <%= listing.address %></p>
+          <p class="ifee">Fee: <%= listing.fee %>/month</p>
+          <p class="idescription"><%- listing.description %></p>
+          <a href="/contact.html">Book Appointment</a>
+        </div>
+        <% } %>
+      </section>
+    </main>
+    <%- include('partials/footer.ejs')%>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: "#cdescription",
+      });
+    </script>
+  </body>
+</html>

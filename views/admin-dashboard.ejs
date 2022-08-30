@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta.ejs') %>
+    <title>Dashboard</title>
+    <style>
+      main {
+        width: 95%;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="/css/dashboard.css" /> -->
+  </head>
+  <body>
+    <%- include('partials/nav-admin.ejs') %>
+    <main>
+      <h2>Work Order Requests List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Unit No.</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Description</th>
+            <th scope="col">View</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var request of requests){ %>
+          <tr>
+            <td><%= request._id %></td>
+            <td><%= request.cname %></td>
+            <td><%= request.cemail %></td>
+            <td><%= request.cphone %></td>
+            <td><%- request.cunit %></td>
+            <td><img src="uploads/<%= request.cphotoName %>" alt="" /></td>
+            <td><%- request.cdescription %></td>
+            <td><a href="/view/<%= request._id %>">View</a></td>
+            <td><a href="/edit/<%= request._id %>">Edit</a></td>
+            <td><a href="/delete/<%= request._id %>">Delete</a></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </main>
+    <%- include('partials/footer.ejs')%>
+  </body>
+</html>
