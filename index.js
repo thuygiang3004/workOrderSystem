@@ -373,5 +373,6 @@ myApp.get("/setup", function (req, res) {
 });
 
 // start the server (listen at a port)
-myApp.listen(8090);
+const port = process.env.PORT || 8090;
+myApp.listen(port);
 console.log("Everything executed, open http://localhost:8090/ in the browser.");
