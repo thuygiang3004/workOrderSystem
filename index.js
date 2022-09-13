@@ -3,13 +3,14 @@ const express = require("express");
 const path = require("path");
 const fileUpload = require("express-fileupload");
 const mongoose = require("mongoose");
-const session = require("express-session");
 
+const session = require("express-session");
+require("dotenv").config();
 // set up expess validator
 const { check, validationResult } = require("express-validator");
 
 // connect to DB
-mongoose.connect("mongodb://localhost:27017/tgnProperty", {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
