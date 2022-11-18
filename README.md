@@ -4,10 +4,10 @@ I. Overview
 2. Tech stack: NodeJS, ExpressJS, MongoDB, EJS
 
 II. How to run the project
-A. What you need installed before running:
++ What you need installed before running:
 - MongoDB Compass
 - Visual Studio Code IDE
-B. Make sure you have these software installed then execute following steps:
++ Make sure you have these software installed then execute following steps:
 1. Clone the project to your local folder
 2. Open the project folder with Visual Studio Code IDE
 3. Open a terminal (Ctrl+Shift+~), on the terminal run following commands:
