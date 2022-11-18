@@ -6,6 +6,7 @@ I. Overview
 II. What you need installed before running:
 - MongoDB Compass
 - Visual Studio Code IDE
+
 III. How to run the project
 1. Clone the project to your local folder
 2. Open the project folder with Visual Studio Code IDE
@@ -14,6 +15,6 @@ III. How to run the project
 3.2 npm start (a message in the terminal will tell you to open http://localhost:8090/)
 4. Open the http://localhost:8090/ in a browser
 
-III. Account to access admin portal
+IV. Account to access admin portal
 - user: admin
 - pw: admin
