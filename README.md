@@ -16,5 +16,6 @@ III. How to run the project
 4. Open the http://localhost:8090/ in a browser
 
 IV. Account to access admin portal
+* Open link http://localhost:8090/setup to setup admin account
 - user: admin
 - pw: admin
